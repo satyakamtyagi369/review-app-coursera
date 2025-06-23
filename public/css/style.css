@@ -1,0 +1,86 @@
+
+.coverbox {
+  background-color: rgba(188, 248, 23, 0.5);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 1rem rgba(28, 72, 205, 1);
+  width: 45%;
+  margin: 30px auto;
+  height:90%;
+}
+button{
+  cursor:pointer;
+}
+/* Base and Reset */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f2f5; line-height: 1.6; }
+
+/* Header */
+header { background: #2b3a67; color: #fff; padding: 20px; text-align: center; }
+header nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+header nav a:hover { opacity: 0.8; }
+
+/* Container */
+.container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+
+/* Book Cards */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+.book-card {
+  background: #fff; border-radius: 10px; overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.2s;
+}
+.book-card:hover { transform: translateY(-5px); }
+.book-card img.cover { width: 100%; height: 350px; object-fit: cover; }
+.book-card .info { padding: 15px; }
+.book-card h3 { font-size: 20px; margin-bottom: 10px; color: #2b3a67; }
+.book-card p { font-size: 14px; margin-bottom: 6px; color: #555; }
+.book-card button {
+  background: #28a745; color: #fff; border: none; padding: 10px; width: 100%;
+  border-radius: 5px; cursor: pointer;
+}
+.book-card button:hover { background: #218838; }
+
+/* Details Modal */
+.modal {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5); display: none; justify-content: center; align-items: center;
+}
+.modal .modal-content {
+  background: #fff; width: 90%; max-width: 800px; border-radius: 8px;
+  overflow: auto; max-height: 90vh; position: relative; padding: 20px;
+}
+.modal .close-btn {
+  position: absolute; right: 15px; top: 15px;
+  background: none; border: none; font-size: 24px; cursor: pointer;
+}
+.modal-content h2 { margin-bottom: 10px; color: #2b3a67; }
+
+/* Reviews */
+.reviews-list .review {
+  background: #f9f9f9; border-left: 4px solid #28a745;
+  padding: 12px; margin-bottom: 12px; border-radius: 4px;
+}
+.reviews-list .review h4 { font-weight: bold; margin-bottom: 4px; }
+.reviews-list .review p { font-size: 14px; }
+
+/* Review Form */
+.review-form { margin-top: 20px; }
+.review-form textarea {
+  width: 100%; padding: 12px; margin-bottom: 15px;
+  border: 1px solid #ccc; border-radius: 5px; resize: vertical;
+}
+.review-form button { background: #007bff; color: #fff; padding: 12px 20px; border: none; cursor: pointer; }
+.review-form button:hover { background: #0069d9; }
+
+/* Footer */
+footer { text-align: center; padding: 15px; background: #e4e6eb; margin-top: 30px; border-radius: 8px; font-size: 14px; }
+
+/* Mobile */
+@media (max-width: 600px) {
+  .book-card img.cover { height: 250px; }
+  .modal-content { padding: 15px; }
+}

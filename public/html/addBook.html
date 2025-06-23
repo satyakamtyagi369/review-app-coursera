@@ -1,0 +1,25 @@
+<!-- public/html/addBook.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Book</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <h2>Add New Book</h2>
+  <form id="addBookForm">
+    <input type="text" id="isbn" placeholder="ISBN" required><br>
+    <input type="text" id="title" placeholder="Title" required><br>
+    <input type="text" id="author" placeholder="Author" required><br>
+    <input type="text" id="genre" placeholder="Genre"><br>
+    <textarea id="description" placeholder="Description" rows="4"></textarea><br>
+    <input type="text" id="imageUrl" placeholder="Cover Image URL"><br>
+    <button type="submit">Add Book</button>
+  </form>
+
+  <div id="message"></div>
+
+  <script src="../js/addBook.js"></script>
+</body>
+</html>
